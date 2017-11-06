@@ -1,0 +1,136 @@
+.footer {
+    @include flex-column;
+}
+
+.footer-top {
+    background-color: $footercolor;
+    width: 100%;
+    padding-top: 32px;
+    padding-bottom: 22px;
+    @include tablet {
+        padding-top: 22px;
+        padding-bottom: 12px;
+    }
+}
+
+.footer-bottom {
+    padding: 18px 0 9px;
+    width: 100%;
+    background-color: $activecolor;
+}
+
+.footer-bottom .footer-wrapper {
+    @include tablet {
+        @include flex-column;
+    }
+}
+
+.footer-top .footer-wrapper {
+    @include tablet {
+        @include flex-column;
+    }
+}
+
+.footer-wrapper {
+    @include flex-row;
+    align-items: center;
+    justify-content: space-between;
+    @include desktop {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    @include phone {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+}
+
+.info-item {
+    margin-bottom: 19px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    @include desktop {
+        margin-bottom: 14px;
+    }
+    @include tablet {
+        margin-bottom: 8px;
+        text-align: center;
+    }
+    @include tablet {}
+}
+
+.info-link {
+    font-family: $mainfont;
+    font-size: $newssize;
+    color: $maincolor;
+    @include tablet {
+        font-size: $catsize;
+        text-align: center;
+    }
+}
+
+.footer-social {
+    @include flex-column;
+    justify-content: right;
+}
+
+.social-list {
+    display: inline-flex;
+}
+
+.social-item {
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
+    &:last-child {
+        margin-right: 0px;
+    }
+}
+
+.follow-me {
+    margin-bottom: 22px;
+    font-family: $mainfont;
+    font-size: $newssize;
+    color: $maincolor;
+    text-transform: uppercase;
+    text-align: right;
+    @include tablet {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-weight: 800;
+        text-align: center
+    }
+}
+
+.social-ico {
+    width: 30px;
+    height: 30px;
+    &:hover {
+        filter: drop-shadow(2px 2px 2px gray);
+    }
+}
+
+.copyright-text {
+    font-family: $mainfont;
+    font-size: $mainsize;
+    color: $white;
+    text-align: right;
+    @include tablet {
+        text-align: center;
+    }
+    @include phone {
+        font-size: 10px;
+    }
+}
+
+.footer-logo {
+    @include laptop {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    @include phone {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,152 @@
+.header {
+    width: 100vw;
+    @include flex-column;
+    overflow: hidden;
+}
+
+.slider-header-list {
+    width: 100%;
+    height: 100%;
+}
+
+.slider-header-item--wrapper {
+    position: relative;
+}
+
+.info-slider-header {
+    position: absolute;
+    bottom: 0;
+    margin-left: 260px;
+    @include laptop {
+        margin-left: 200px;
+    }
+    @include tablet {
+        margin-left: 80px;
+    }
+}
+
+.slider-header-title {
+    max-width: 50%;
+    margin-bottom: 27px;
+    @include laptop {
+        max-width: 75%;
+        margin-bottom: 17px;
+    }
+    @include tablet {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+    @include tablet {
+        margin-bottom: 5px;
+    }
+}
+
+.slider-title-header {
+    font-family: $contentfont;
+    font-size: $slidersize;
+    line-height: 1.2em;
+    color: $white;
+    text-align: left;
+    @include desktop {
+        font-size: 50px;
+    }
+    @include laptop {
+        font-size: $articsize;
+    }
+    @include tablet {
+        font-size: $titlesize;
+    }
+    @include smartphone {
+        font-size: $moresize;
+    }
+}
+
+.slider-header-more {
+    @include flex-row;
+    align-items: center;
+    margin-bottom: 88px;
+    &:hover {
+        cursor: pointer;
+        .more-img-header {
+            background-color: $hovercolor;
+        }
+    }
+    @include desktop {
+        margin-bottom: 78px;
+    }
+    @include laptop {
+        margin-bottom: 48px;
+    }
+    @include tablet {
+        margin-bottom: 15px;
+    }
+}
+
+.slider-more-header {
+    font-family: $mainfont;
+    font-size: $moresize;
+    color: $white;
+    text-transform: uppercase;
+    &:hover {
+        color: rgb(221, 216, 216);
+    }
+    @include desktop {
+        font-size: $newssize;
+    }
+    @include laptop {
+        font-size: $catsize;
+    }
+}
+
+.more-img-header {
+    margin-left: 10px;
+    width: 35px;
+    height: 35px;
+    background-color: $activecolor;
+    background-image: url(../img/icons/arrow-more.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 50% 50%;
+    @include laptop {
+        width: 30px;
+        height: 30px;
+    }
+    @include tablet {
+        width: 25px;
+        height: 25px;
+        margin-left: 5px;
+    }
+}
+
+.bx-wrapper .bx-pager {
+    @include desktop {
+        bottom: 33px;
+    }
+    @include laptop {
+        bottom: 13px;
+    }
+    @include tablet {
+        bottom: 5px;
+    }
+    @include tabletToPhone {
+        text-align: right;
+        right: 10px;
+    }
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+    @include tablet {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.bx-controls-direction {
+    display: none;
+}
+
+.bx-wrapper img {
+    max-width: 100%;
+    max-height: 660px;
+    height: 100%;
+}

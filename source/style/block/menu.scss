@@ -1,0 +1,246 @@
+    .wrapper-content .menu-wrapper {
+        margin-left: -11%;
+        padding-bottom: 40px;
+    }
+    
+    @media all and (max-width:1700px) {
+        .wrapper-content .menu-wrapper {
+            margin-left: -6%;
+        }
+    }
+    
+    @media all and (max-width:1600px) {
+        .wrapper-content .menu-wrapper {
+            margin-left: -2%;
+        }
+    }
+    
+    @media all and (max-width:1500px) {
+        .wrapper-content .menu-wrapper {
+            margin-left: 0%;
+        }
+    }
+    
+    @media all and (max-width:1400px) {
+        .wrapper-content .menu-wrapper {
+            margin-left: 2%;
+        }
+    }
+    
+    .menu-wrapper {
+        position: absolute;
+        width: 50px;
+        top: 0;
+        margin-left: -15px;
+        max-width: 1160px;
+        margin: 0 auto;
+        z-index: 15;
+        background-color: $footercolor;
+    }
+    
+    .menu-wrapper .active-main-menu {
+        background-color: #faf9f7;
+    }
+    
+    .active-main-menu {
+        width: 315px;
+    }
+    
+    .section-main-menu {
+        @include flex-column;
+        width: 50px;
+    }
+    
+    .main-menu {
+        @include flex-row;
+        height: inherit;
+    }
+    
+    .main-menu-logo {
+        width: 50px;
+        background-color: $activecolor;
+        padding: 33px 6px;
+        @include tabletToPhone {
+            padding: 15px 6px;
+        }
+    }
+    
+    .logo-img {
+        width: auto;
+    }
+    
+    .logo-img-active-menu {
+        display: none;
+    }
+    
+    .main-menu-menu {
+        padding-top: 16px;
+        padding-left: 36px;
+        padding-right: 36px;
+        @include flex-column;
+        background-color: #faf9f7;
+        padding-bottom: 20px;
+        height: 100vh;
+        display: none;
+    }
+    
+    .active-main-menu .main-menu-menu {
+        display: block;
+    }
+    
+    .main-menu-icon {
+        @include flex-column;
+        align-items: center;
+        padding: 12px;
+    }
+    
+    .menu-icon {
+        margin-bottom: 19px;
+    }
+    
+    .search-icon {
+        margin-bottom: 19px;
+    }
+    
+    .ico-link {
+        &:hover {
+            opacity: .8;
+        }
+    }
+    
+    .active-main-menu .section-main-menu {
+        width: 100%;
+    }
+    
+    .active-main-menu .main-menu-logo {
+        width: 315px;
+        background-color: $activecolor;
+        padding: 34px 67px;
+        .active-main-menu .logo-img {
+            display: none;
+        }
+        @include tabletToPhone {
+            padding: 15px 67px;
+        }
+    }
+    
+    .active-main-menu .logo-img {
+        display: none;
+    }
+    
+    .active-main-menu .logo-img-active-menu {
+        display: block;
+        width: auto;
+    }
+    
+    .active-main-menu {
+        width: 315px;
+    }
+    
+    .menu-list {
+        margin-bottom: 24px;
+    }
+    
+    .sub-menu-list {
+        margin-left: 33px;
+        margin-bottom: 24px;
+    }
+    
+    .menu-section-title {
+        font-family: $mainfont;
+        font-size: $mainsize;
+        color: $menucolor;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+    
+    .menu-link {
+        font-family: $mainfont;
+        font-size: $mainsize;
+        color: $maincolor;
+    }
+    
+    .active-menu-link {
+        color: $activecolor;
+    }
+    
+    .menu-item {
+        margin-bottom: 4px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid #e3e2e0;
+    }
+    
+    .sub-menu-list .menu-item {
+        border-bottom: none;
+    }
+    
+    .section-search {
+        position: absolute;
+        top: 10px;
+        left: 70px;
+        width: 325px;
+        height: auto;
+        @include flex-column;
+        display: none;
+        background-color: rgba(#e3e2e0, 0.7);
+        padding: 15px;
+        padding-bottom: 25px;
+        z-index: 15;
+        @include laptop {
+            width: 250px;
+            top: 25%;
+        }
+        @include tablet {
+            width: 275px;
+            top: 25%;
+            left: 60px;
+        }
+        @include tabletToPhone {
+            width: 260px;
+            top: 10px;
+            background-color: rgba(#e3e2e0, 1);
+        }
+        @include smartphone {
+            width: 230px;
+            top: 10px;
+            left: 55px;
+        }
+    }
+    
+    .active-search {
+        display: block;
+    }
+    
+    .close-search {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 15px;
+        &:hover {
+            transform: rotate(25deg);
+        }
+    }
+    
+    .search-input {
+        margin-top: 140px;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        font-family: openSansRegular;
+        font-size: 18px;
+        border-bottom: 1px solid $maincolor;
+        &:focus {
+            @include placeholder {
+                color: transparent;
+            }
+        }
+        @include laptop {
+            margin-top: 50px;
+        }
+    }
+    
+    @include placeholder {
+        font-family: openSansRegular;
+        font-size: 18px;
+        color: $maincolor;
+    }

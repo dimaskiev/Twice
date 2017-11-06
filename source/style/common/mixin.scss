@@ -1,0 +1,93 @@
+/*Миксины*/
+
+
+/*Адаптив*/
+
+@mixin desktop {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin tabletToPhone {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin smartphone {
+    @media (max-width: 380px) {
+        @content;
+    }
+}
+
+
+/*Позиционирование*/
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-row-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@mixin flex-row-space {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@mixin center-center {
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin align-space {
+    justify-content: space-around;
+}
+
+@mixin align-between {
+    justify-content: space-between;
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+}

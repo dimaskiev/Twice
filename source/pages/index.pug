@@ -1,0 +1,21 @@
+extends ../template/pages/_template
+
+block variables
+  - var title = 'Главная страница'
+
+block content
+  .wrapper
+    .content
+      header.header
+        include ../template/common/_header
+      main.main
+        .wrapper-content
+          section.news
+            include ../template/block/_news
+          section.articles
+            include ../template/block/_articles    
+    footer.footer
+      include ../template/common/_footer
+  include ../template/block/_mainmenu
+
+    

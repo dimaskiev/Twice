@@ -1,0 +1,287 @@
+.news {
+    @include flex-column;
+    padding-top: 75px;
+    padding-bottom: 52px;
+    position: relative;
+    &::after {
+        margin: 0 auto;
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        width: 75%;
+        max-width: 570px;
+        height: 1px;
+        content: '';
+        background-color: $bordercolor;
+    }
+    @include desktop {
+        padding-top: 65px;
+        padding-bottom: 45px;
+    }
+    @include laptop {
+        padding-top: 55px;
+        padding-bottom: 40px;
+    }
+    @include tablet {
+        padding-top: 45px;
+        padding-bottom: 35px;
+    }
+    @include tabletToPhone {
+        padding-top: 35px;
+        padding-bottom: 30px;
+    }
+    @include phone {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    @include smartphone {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+/*Blocks*/
+
+.news-list {
+    margin-bottom: 42px;
+    @include flex-row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include desktop {
+        justify-content: space-between;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    @include laptop {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 37px;
+    }
+    @include tablet {
+        margin-bottom: 25px;
+    }
+    @include phone {
+        margin-bottom: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+.news-item {
+    @include flex-column;
+    flex-basis: 366px;
+    margin-bottom: 22px;
+    @include desktop {
+        flex-basis: 32%;
+    }
+    @include laptop {
+        flex-basis: 48%;
+    }
+    @include tabletToPhone {
+        flex-basis: 100%;
+    }
+}
+
+.news-image {
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.news-img {
+    width: 100%;
+}
+
+.news-date {
+    margin-bottom: 23px;
+    @include laptop {
+        margin-bottom: 15px;
+    }
+    @include tablet {
+        margin-bottom: 10px;
+    }
+}
+
+.more-news {
+    display: none;
+    width: 100%;
+}
+
+
+/*Text*/
+
+.title-news {
+    font-family: $contentfont;
+    font-size: $moresize;
+    color: $maincolor;
+    &:hover {
+        color: $titlehover;
+    }
+    @include laptop {
+        font-size: $newssize;
+    }
+    @include tablet {
+        font-size: $catsize;
+    }
+}
+
+.date-news {
+    font-family: $contentfont;
+    font-size: $mainsize;
+    color: $titlehover;
+}
+
+.more-section {
+    @include flex-row;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        cursor: pointer;
+        .more-img {
+            background-color: $hovercolor;
+        }
+        .more-link {
+            font-weight: 800;
+        }
+    }
+}
+
+.more-link-news {
+    font-family: $mainfont;
+    font-size: $newssize;
+    color: $titlehover;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.more-link {
+    font-family: $mainfont;
+    font-size: $titlesize;
+    color: $titlehover;
+    text-align: center;
+    text-transform: uppercase;
+    @include laptop {
+        font-size: $moresize;
+    }
+}
+
+.more-img-news {
+    margin-left: 15px;
+    width: 25px;
+    height: 25px;
+    background-color: $activecolor;
+    background-image: url(../img/icons/arrow-more.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 50% 50%;
+    @include tabletToPhone {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+/*First news*/
+
+.first-news.news-item {
+    flex-basis: 763px;
+    height: auto;
+    position: relative;
+    @include tabletToPhone {
+        position: unset;
+        @include flex-column;
+        align-items: unset;
+    }
+    @include desktop {
+        flex-basis: 65%;
+    }
+    @include laptop {
+        flex-basis: 100%;
+    }
+    @include tablet {
+        flex-basis: 100%;
+    }
+    @include phone {}
+}
+
+.first-news {
+    .news-info {
+        position: absolute;
+        bottom: 45px;
+        left: 35px;
+        & .news-date {
+            marginn-bottom: 15px;
+            @include tabletToPhone {
+                position: unset;
+            }
+        }
+        & .news-title {
+            max-width: 75%;
+            margin-bottom: 15px;
+            @include tabletToPhone {
+                position: unset;
+                max-width: 100%;
+            }
+        }
+        & .more-news {
+            @include flex-row;
+            align-items: center;
+            &:hover {
+                cursor: pointer;
+                .more-img-news {
+                    background-color: $hovercolor;
+                }
+                .more-link-news {
+                    color: #1d1d1d;
+                }
+            }
+            @include tabletToPhone {
+                position: unset;
+                display: none;
+            }
+        }
+        @include tabletToPhone {
+            position: unset;
+        }
+    }
+}
+
+.first-news {
+    .news-image {
+        @include desktop {
+            width: 100%;
+        }
+    }
+    .title-news {
+        font-family: $contentfont;
+        font-size: $titlesize;
+        color: $maincolor;
+        &:hover {
+            color: $titlehover;
+        }
+        @include tablet {
+            font-size: $moresize;
+        }
+    }
+    .date-news {
+        font-family: $contentfont;
+        font-size: $newssize;
+        color: $titlehover;
+        @include tablet {
+            font-size: $catsize;
+        }
+    }
+    @include desktop {
+        align-items: center;
+    }
+}
+
+@media all and (max-width: 1170px) {
+    .first-news {
+        .news-info {
+            bottom: 75px;
+        }
+    }
+}
